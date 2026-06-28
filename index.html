@@ -109,7 +109,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(254,249,240,0.96);backdrop
 .project-card:hover .project-name{color:var(--brown-900);}
 .project-card:hover .project-desc{color:var(--brown-600);}
 .project-card:hover .ptag{background:var(--sand-200);border-color:var(--sand-300);color:var(--brown-700);}
-
 .project-icon-row{font-size:30px;margin-bottom:16px;display:inline-block;position:relative;width:36px;height:36px;line-height:36px;}
 .project-name{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700;color:var(--text-on-dark);margin-bottom:10px;transition:color 0.3s;}
 .project-desc{font-size:13px;color:var(--text-on-dark-muted);line-height:1.70;margin-bottom:18px;flex-grow:1;transition:color 0.3s;}
@@ -202,7 +201,6 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
     <div class="hero">
       <div class="open-badge"><span class="open-badge-dot"></span>Open to work · Linux Administrator · Cloud Engineer</div>
       <h1>Linux <em>Administrator</em><br>&amp; Infrastructure Engineer</h1>
-      <!-- UPDATED: 1.7 → 1.8 years, 25+ → 50+ servers, added "zero data loss" highlight -->
       <p class="hero-sub">Infrastructure automation specialist with 1.8 years of hands-on experience managing 50+ servers across on-premises and VMware ESXi environments. Expert in Ansible, Wazuh XDR, and enterprise security monitoring — with a proven record of zero data loss across 5+ emergency recoveries.</p>
       <div class="hero-roles">
         <span class="role-pill">On-Premises Infrastructure</span>
@@ -216,7 +214,6 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
     </div>
   </div>
 
-  <!-- UPDATED: 25+ → 50+ servers, 40% → 80% automation gain -->
   <div class="stats-strip">
     <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Servers managed</div></div>
     <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Emergency recoveries</div></div>
@@ -233,25 +230,16 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
       <div class="exp-body">
         <div class="exp-title">Linux Administrator</div>
         <div class="exp-role-label">Infrastructure &amp; Security</div>
-        <!-- UPDATED: more accurate description from resume -->
         <p class="exp-desc">Leading infrastructure automation and security at a managed services firm, managing a 50+ server fleet across CentOS, Rocky Linux, and Ubuntu environments — driving zero-downtime operations and systematic security hardening.</p>
         <ul class="achievements">
-          <!-- UPDATED: 25+ → 50+ Linux and Windows endpoints -->
           <li>Inherited a 50+ server fleet with no centralised security visibility; deployed Wazuh XDR agents across all Linux and Windows endpoints, cutting incident detection from hours to under 15 minutes</li>
-          <!-- UPDATED: 40% → ~80% of team time, 50+ hosts -->
           <li>Identified routine tasks consuming ~80% of team time; built Ansible playbooks and roles targeting all 50+ hosts, version-controlled in Git, reclaiming capacity for higher-priority engineering work</li>
-          <!-- UPDATED: added rescue/single-user mode, LVM/filesystem error context -->
           <li>Responded to 5+ emergency production outages (rescue/single-user mode, failed LVM mounts and filesystem errors) with zero data loss and full service restoration across all incidents</li>
-          <!-- UPDATED: added "eliminating direct port exposure" detail -->
           <li>Designed and deployed NGINX as a reverse proxy with SSL termination and FQDN-based routing, eliminating direct port exposure and centralising TLS management across client environments</li>
-          <!-- NEW: LVM online expansion from resume -->
           <li>Resolved recurring storage bottlenecks via online LVM volume group expansion and logical volume resizing — zero downtime and zero service interruption across all expansions</li>
           <li>Hardened all managed servers with SELinux enforcing mode, FirewallD zone rules, and Fail2Ban — blocking 500+ brute-force SSH attempts within the first week of deployment</li>
-          <!-- NEW: Python metrics scripts from resume -->
           <li>Developed Python scripts to aggregate server metrics (uptime, service status, disk utilisation) with automated email delivery, enabling fleet-wide health checks without manual SSH per host</li>
-          <!-- NEW: NFS/Samba/VSFTP from resume -->
           <li>Owned NFS, Samba, and VSFTP file services for 5+ client environments, eliminating recurring permission, authentication, and mount failures that had previously required weekly manual intervention</li>
-          <!-- NEW: MariaDB + Asterisk from resume -->
           <li>Administered MariaDB databases and Asterisk PBX across 25+ client environments, maintaining 99%+ service availability for enterprise telephony and database operations</li>
         </ul>
       </div>
@@ -276,43 +264,55 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
     <p class="section-eyebrow">Work</p>
     <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
+
+      <!-- 0: Docker RustDesk -->
       <div class="project-card" id="card-whale" onclick="showDetail(0)">
         <div class="project-icon-row" id="icon-whale">🐳</div>
         <div class="project-name">Dockerized RustDesk Self-Hosted</div>
         <p class="project-desc">Containerized RustDesk with persistent volumes and automatic restart policies — a secure, self-hosted remote access alternative eliminating third-party licensing.</p>
         <div class="project-tags"><span class="ptag">Docker</span><span class="ptag">RustDesk</span><span class="ptag">Containerization</span></div>
       </div>
-      <!-- UPDATED: 20+ → 50+ Linux and Windows endpoints -->
+
+      <!-- 1: Wazuh XDR -->
       <div class="project-card" id="card-shield" onclick="showDetail(1)">
         <div class="project-icon-row" id="icon-shield">🛡️</div>
         <div class="project-name">Wazuh XDR Security Platform</div>
         <p class="project-desc">Centralized SIEM/XDR platform monitoring 50+ Linux and Windows endpoints with custom alert rules, active response policies, and compliance dashboards.</p>
         <div class="project-tags"><span class="ptag">Wazuh</span><span class="ptag">SIEM</span><span class="ptag">Security</span></div>
       </div>
+
+      <!-- 2: Asterisk PBX -->
       <div class="project-card" id="card-phone" onclick="showDetail(2)">
         <div class="project-icon-row" id="icon-phone">☎️</div>
         <div class="project-name">Asterisk PBX Implementation</div>
         <p class="project-desc">Compiled and deployed Asterisk from source with SIP trunk configuration and dial plans for enterprise telephony — reducing client telephony costs by 35%.</p>
         <div class="project-tags"><span class="ptag">Asterisk</span><span class="ptag">PBX</span><span class="ptag">VoIP</span></div>
       </div>
-      <div class="project-card" id="card-lock" onclick="showDetail(3)">
-        <div class="project-icon-row" id="icon-lock">🔐</div>
-        <div class="project-name">OpenLDAP Authentication</div>
-        <p class="project-desc">Replaced fragmented local user management with centralized LDAP authentication across multiple Linux servers, standardising access control and provisioning.</p>
-        <div class="project-tags"><span class="ptag">OpenLDAP</span><span class="ptag">SSSD</span><span class="ptag">Authentication</span></div>
+
+      <!-- 3: Self-Hosted LLM (NEW — replaced OpenLDAP) -->
+      <div class="project-card" id="card-brain" onclick="showDetail(3)">
+        <div class="project-icon-row" id="icon-brain">🧠</div>
+        <div class="project-name">Self-Hosted LLM (Qwen) with Open WebUI</div>
+        <p class="project-desc">Provisioned an Ubuntu server to run the Qwen large language model locally via Ollama and Python, served through Open WebUI — giving the dev team a fully private, zero-API-cost AI assistant.</p>
+        <div class="project-tags"><span class="ptag">Ollama</span><span class="ptag">Qwen LLM</span><span class="ptag">Open WebUI</span><span class="ptag">Python</span></div>
       </div>
+
+      <!-- 4: Ansible -->
       <div class="project-card" id="card-gear" onclick="showDetail(4)">
         <div class="project-icon-row" id="icon-gear">⚙️</div>
         <div class="project-name">Ansible Automation Hub</div>
         <p class="project-desc">Multi-role Ansible project with disk monitoring, automated MariaDB backups with retention policies, and service health checks via Semaphore UI — reclaiming 80% of team time.</p>
         <div class="project-tags"><span class="ptag">Ansible</span><span class="ptag">Git</span><span class="ptag">Semaphore</span></div>
       </div>
+
+      <!-- 5: Storage -->
       <div class="project-card" id="card-disk" onclick="showDetail(5)">
         <div class="project-icon-row" id="icon-disk">💾</div>
         <div class="project-name">Enterprise Storage Solutions</div>
         <p class="project-desc">Managed NFS, Samba, and VSFTP file services for 5+ client environments with LDAP integration, eliminating recurring weekly manual interventions.</p>
         <div class="project-tags"><span class="ptag">NFS</span><span class="ptag">Samba</span><span class="ptag">VSFTP</span></div>
       </div>
+
     </div>
   </section>
 
@@ -330,7 +330,6 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
           <div class="skill-group-label">Automation &amp; DevOps</div>
           <div class="skill-chips"><span class="chip">Ansible</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Bash Scripting</span><span class="chip">Python</span><span class="chip">Git / Version Control</span><span class="chip">Semaphore UI</span><span class="chip">Cron</span></div>
         </div>
-        <!-- UPDATED: added SonicWall, Bastion Host -->
         <div class="category-box">
           <div class="skill-group-label">Security &amp; Networking</div>
           <div class="skill-chips"><span class="chip">Wazuh XDR / SIEM</span><span class="chip">SELinux</span><span class="chip">FirewallD</span><span class="chip">Fail2Ban</span><span class="chip">OpenLDAP / SSSD</span><span class="chip">SonicWall</span><span class="chip">Bastion Host</span><span class="chip">VPN Configuration</span></div>
@@ -339,12 +338,10 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
           <div class="skill-group-label">Web &amp; Storage Services</div>
           <div class="skill-chips"><span class="chip">NGINX / Apache HTTPD</span><span class="chip">MySQL / MariaDB</span><span class="chip">Asterisk PBX</span><span class="chip">NFS / Samba / VSFTP</span><span class="chip">LVM / Storage Management</span></div>
         </div>
-        <!-- UPDATED: added Cockpit -->
         <div class="category-box">
           <div class="skill-group-label">Monitoring &amp; Observability</div>
           <div class="skill-chips"><span class="chip">Wazuh Dashboards</span><span class="chip">Cockpit</span><span class="chip">Log Analysis</span><span class="chip">systemd / journald</span><span class="chip">Alerting &amp; Incident Response</span><span class="chip">Compliance Reporting</span></div>
         </div>
-        <!-- NEW: Package Management category -->
         <div class="category-box">
           <div class="skill-group-label">Package Management &amp; Networking</div>
           <div class="skill-chips"><span class="chip">YUM / DNF</span><span class="chip">APT</span><span class="chip">TCP/IP</span><span class="chip">SSH / SCP / RSYNC</span><span class="chip">DNS</span></div>
@@ -354,14 +351,12 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
   </section>
 
   <!-- CERTIFICATIONS -->
-  <!-- UPDATED: replaced 3 Udemy certs with Red Hat RHCSA/RHCE Training, kept AZ-104 -->
   <section class="section" id="certs">
     <p class="section-eyebrow">Credentials</p>
     <h2 class="section-title">Certifications &amp; Learning</h2>
     <div class="certs-grid">
       <div class="cert-card"><div class="cert-icon">🎓</div><div><div class="cert-name">Red Hat Linux Training — RHCSA &amp; RHCE Curriculum</div><div class="cert-issuer">Udemy</div><span class="cert-badge">Completed</span></div></div>
       <div class="cert-card"><div class="cert-icon">☁️</div><div><div class="cert-name">Azure Administrator Associate</div><div class="cert-issuer">Microsoft · AZ-104</div><span class="cert-badge">In Progress</span></div></div>
-
     </div>
   </section>
 
@@ -421,25 +416,21 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
   <div class="detail-body" id="detail-content"></div>
 </div>
 
-<canvas id="cvs-shield" style="position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:none;"></canvas>
-<canvas id="cvs-phone"  style="position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:none;"></canvas>
-<canvas id="cvs-lock"   style="position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:none;"></canvas>
-
 <script>
-/* ── smooth scroll helper — avoids anchor link interception in preview frames ── */
+/* ── smooth scroll helper ── */
 function navTo(id){
   const el=document.getElementById(id);
   if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-/* ── project data — UPDATED Wazuh: 20+ → 50+ endpoints, 80% automation ── */
+/* ── project data ── */
 const projects=[
-  {icon:"🐳",title:"Dockerized RustDesk Self-Hosted",subtitle:"Secure, self-hosted remote access solution using Docker containerization",problem:"Client organizations depended on commercial remote access tools with recurring licensing costs and limited data sovereignty.",solution:"Containerized RustDesk using custom Docker images with persistent volumes for configuration and database storage. Implemented automatic restart policies, Docker Compose configurations, and persistent storage.",outcomes:["Eliminated third-party licensing dependency","Full data sovereignty — all remote sessions on-premises","Reduced setup time from 2+ hours to 15 minutes","Zero downtime updates and maintenance"],tech:["Docker","Docker Compose","RustDesk","Linux","Persistent Volumes"]},
-  {icon:"🛡️",title:"Wazuh XDR Centralized Security Monitoring",subtitle:"Enterprise SIEM/XDR platform for comprehensive threat detection across 50+ endpoints",problem:"50+ servers had no centralised security visibility. Incident detection was entirely manual, leaving the fleet exposed to threats going undetected for hours.",solution:"Architected a centralized Wazuh XDR platform with agents deployed across 50+ Linux and Windows endpoints. Configured custom alert rules, agent groups, active response policies, log analysis pipelines, and compliance dashboards for real-time incident triage.",outcomes:["Reduced incident detection from hours to under 15 minutes","Real-time alerting across all 50+ Linux and Windows endpoints","Automated compliance reporting","Active response policies blocking threats automatically"],tech:["Wazuh","SIEM / XDR","Log Analysis","Alert Rules","Compliance Dashboards","Linux","Windows Server"]},
-  {icon:"☎️",title:"Asterisk PBX Implementation",subtitle:"Enterprise telephony system compiled from source with full customization",problem:"Client was paying substantial monthly fees for a hosted PBX solution with limited customization and vendor lock-in.",solution:"Compiled Asterisk from source on Linux, configured SIP trunks, extension dial plans, voicemail, and IVR menus. Set up redundancy and failover for high availability.",outcomes:["Reduced telephony costs by 35%","Full control over telephony infrastructure","Eliminated vendor lock-in","99.5% uptime maintained"],tech:["Asterisk","SIP Trunks","VoIP","Linux","Dial Plans","IVR"]},
-  {icon:"🔐",title:"OpenLDAP Centralized Authentication",subtitle:"Enterprise directory and authentication for multi-server environments",problem:"Multiple Linux servers had fragmented per-system local user management with inconsistent access policies and slow provisioning.",solution:"Deployed OpenLDAP with SSSD on all Linux servers. Implemented standardized access control policies and automated user provisioning and deprovisioning to a single directory operation.",outcomes:["Consolidated multiple servers into a single directory","Reduced provisioning time from hours to a single directory operation","Standardized access policies across all systems","Enabled seamless onboarding/offboarding"],tech:["OpenLDAP","SSSD","Linux (Rocky / Ubuntu)","Authentication","Directory Services"]},
-  {icon:"⚙️",title:"Ansible Automation Hub with Semaphore UI",subtitle:"Infrastructure automation framework that reclaimed ~80% of team capacity",problem:"Routine maintenance — disk utilisation checks, MariaDB backups, service restarts, log rotation — was consuming approximately 80% of team time and leaving little capacity for engineering work.",solution:"Built multi-role Ansible project in Git covering disk utilisation monitoring, automated MariaDB backups with retention policies, service health checks, and log rotation. Integrated Semaphore UI for web-based job scheduling and role-based access, enabling non-CLI team members to trigger and audit runs without shell access.",outcomes:["Reclaimed ~80% of team capacity previously spent on manual tasks","Automated disk checks reduce human error significantly","Web UI enables non-CLI team members to trigger and audit runs","Full audit trail of all automation executions via Semaphore UI"],tech:["Ansible","Python","Bash","Git","Semaphore UI","MariaDB","Cron"]},
-  {icon:"💾",title:"Enterprise Storage Solutions",subtitle:"Multi-protocol file services with zero recurring failures across 5+ client environments",problem:"NFS, Samba, and VSFTP had recurring permission, authentication, and mount failures requiring weekly manual intervention across multiple client environments.",solution:"Audited NFS export configs, debugged Samba via LDAP integration, implemented VSFTP PAM authentication. Integrated all file services with LDAP directory, documented troubleshooting runbooks, and automated health checks.",outcomes:["Zero manual interventions required in 3 months post-implementation","Resolved 100% of recurring permission and authentication issues","Integrated all file services with centralised LDAP directory","99%+ uptime across all file services for 5+ client environments"],tech:["NFS","Samba / SMB","VSFTP","LDAP Integration","Linux","PAM Auth"]}
+  /* 0 */ {icon:"🐳",title:"Dockerized RustDesk Self-Hosted",subtitle:"Secure, self-hosted remote access solution using Docker containerization",problem:"Client organizations depended on commercial remote access tools with recurring licensing costs and limited data sovereignty.",solution:"Containerized RustDesk using custom Docker images with persistent volumes for configuration and database storage. Implemented automatic restart policies, Docker Compose configurations, and persistent storage.",outcomes:["Eliminated third-party licensing dependency","Full data sovereignty — all remote sessions on-premises","Reduced setup time from 2+ hours to 15 minutes","Zero downtime updates and maintenance"],tech:["Docker","Docker Compose","RustDesk","Linux","Persistent Volumes"]},
+  /* 1 */ {icon:"🛡️",title:"Wazuh XDR Centralized Security Monitoring",subtitle:"Enterprise SIEM/XDR platform for comprehensive threat detection across 50+ endpoints",problem:"50+ servers had no centralised security visibility. Incident detection was entirely manual, leaving the fleet exposed to threats going undetected for hours.",solution:"Architected a centralized Wazuh XDR platform with agents deployed across 50+ Linux and Windows endpoints. Configured custom alert rules, agent groups, active response policies, log analysis pipelines, and compliance dashboards for real-time incident triage.",outcomes:["Reduced incident detection from hours to under 15 minutes","Real-time alerting across all 50+ Linux and Windows endpoints","Automated compliance reporting","Active response policies blocking threats automatically"],tech:["Wazuh","SIEM / XDR","Log Analysis","Alert Rules","Compliance Dashboards","Linux","Windows Server"]},
+  /* 2 */ {icon:"☎️",title:"Asterisk PBX Implementation",subtitle:"Enterprise telephony system compiled from source with full customization",problem:"Client was paying substantial monthly fees for a hosted PBX solution with limited customization and vendor lock-in.",solution:"Compiled Asterisk from source on Linux, configured SIP trunks, extension dial plans, voicemail, and IVR menus. Set up redundancy and failover for high availability.",outcomes:["Reduced telephony costs by 35%","Full control over telephony infrastructure","Eliminated vendor lock-in","99.5% uptime maintained"],tech:["Asterisk","SIP Trunks","VoIP","Linux","Dial Plans","IVR"]},
+  /* 3 — NEW LLM */ {icon:"🧠",title:"Self-Hosted LLM (Qwen) with Open WebUI",subtitle:"Privacy-preserving AI assistant for the internal developer team — zero external API dependency",problem:"The developer team wanted access to an AI assistant but had privacy and cost concerns about sending data to external cloud APIs. There was no internal AI tooling in place.",solution:"Provisioned an Ubuntu server and deployed the Qwen large language model locally using Ollama and Python. Configured Open WebUI as a browser-based chat interface so all team members could interact with the model without any CLI knowledge. Set up persistent model storage and service auto-restart on boot.",outcomes:["Fully self-hosted — all inference runs on-premises, no data leaves the network","Zero ongoing API cost after initial setup","Developer team onboarded to AI tooling without any CLI access required","Model served persistently with auto-restart on server reboot"],tech:["Python","Ollama","Qwen LLM","Open WebUI","Ubuntu Linux","systemd"]},
+  /* 4 */ {icon:"⚙️",title:"Ansible Automation Hub with Semaphore UI",subtitle:"Infrastructure automation framework that reclaimed ~80% of team capacity",problem:"Routine maintenance — disk utilisation checks, MariaDB backups, service restarts, log rotation — was consuming approximately 80% of team time and leaving little capacity for engineering work.",solution:"Built multi-role Ansible project in Git covering disk utilisation monitoring, automated MariaDB backups with retention policies, service health checks, and log rotation. Integrated Semaphore UI for web-based job scheduling and role-based access, enabling non-CLI team members to trigger and audit runs without shell access.",outcomes:["Reclaimed ~80% of team capacity previously spent on manual tasks","Automated disk checks reduce human error significantly","Web UI enables non-CLI team members to trigger and audit runs","Full audit trail of all automation executions via Semaphore UI"],tech:["Ansible","Python","Bash","Git","Semaphore UI","MariaDB","Cron"]},
+  /* 5 */ {icon:"💾",title:"Enterprise Storage Solutions",subtitle:"Multi-protocol file services with zero recurring failures across 5+ client environments",problem:"NFS, Samba, and VSFTP had recurring permission, authentication, and mount failures requiring weekly manual intervention across multiple client environments.",solution:"Audited NFS export configs, debugged Samba via LDAP integration, implemented VSFTP PAM authentication. Integrated all file services with LDAP directory, documented troubleshooting runbooks, and automated health checks.",outcomes:["Zero manual interventions required in 3 months post-implementation","Resolved 100% of recurring permission and authentication issues","Integrated all file services with centralised LDAP directory","99%+ uptime across all file services for 5+ client environments"],tech:["NFS","Samba / SMB","VSFTP","LDAP Integration","Linux","PAM Auth"]}
 ];
 
 let savedScrollY=0;
@@ -466,23 +457,12 @@ function backToMain(){
   window.scrollTo(0,savedScrollY);
 }
 
-function iconPos(icon, card){
-  let el=icon, x=0, y=0;
-  while(el && el!==card){
-    x+=el.offsetLeft;
-    y+=el.offsetTop;
-    el=el.offsetParent;
-  }
-  return {
-    x: x + icon.offsetWidth/2,
-    y: y + icon.offsetHeight/2,
-    w: icon.offsetWidth,
-    h: icon.offsetHeight,
-    left: x,
-    top:  y
-  };
+/* ── shared canvas helper ── */
+function iconPos(icon,card){
+  let el=icon,x=0,y=0;
+  while(el&&el!==card){x+=el.offsetLeft;y+=el.offsetTop;el=el.offsetParent;}
+  return{x:x+icon.offsetWidth/2,y:y+icon.offsetHeight/2,w:icon.offsetWidth,h:icon.offsetHeight,left:x,top:y};
 }
-
 function makeCanvas(card){
   const c=document.createElement('canvas');
   c.style.cssText='position:absolute;inset:0;width:100%;height:100%;border-radius:24px;pointer-events:none;z-index:8;';
@@ -491,457 +471,314 @@ function makeCanvas(card){
   return c;
 }
 
-/* 1. WHALE */
+/* ── 1. WHALE (Docker) ── */
 (function(){
   const card=document.getElementById('card-whale');
   const icon=document.getElementById('icon-whale');
   const cvs=makeCanvas(card);
   let active=false,raf=null,t=0,drops=[];
-
   function spawn(ix,iy){
     for(let i=0;i<4;i++){
       const ang=-Math.PI/2+(Math.random()-0.5)*0.38;
       const spd=3.2+Math.random()*3;
-      drops.push({x:ix,y:iy,vx:Math.cos(ang)*spd,vy:Math.sin(ang)*spd,
-        r:2.5+Math.random()*2,life:1,splashed:false,
-        col:`hsl(${196+Math.random()*18},85%,${58+Math.random()*18}%)`});
+      drops.push({x:ix,y:iy,vx:Math.cos(ang)*spd,vy:Math.sin(ang)*spd,r:2.5+Math.random()*2,life:1,splashed:false,col:`hsl(${196+Math.random()*18},85%,${58+Math.random()*18}%)`});
     }
   }
-
   function frame(){
     t++;
-    const W=card.offsetWidth, H=card.offsetHeight;
-    cvs.width=W; cvs.height=H;
+    const W=card.offsetWidth,H=card.offsetHeight;
+    cvs.width=W;cvs.height=H;
     const ctx=cvs.getContext('2d');
     ctx.clearRect(0,0,W,H);
-
-    if(!active){ drops=[]; icon.style.transform=''; return; }
-
+    if(!active){drops=[];icon.style.transform='';return;}
     icon.style.transform=`translateY(${Math.sin(t*0.07)*2.5}px)`;
-
     const p=iconPos(icon,card);
-    const ix=p.left+p.w*0.52;
-    const iy=p.top;
-
-    if(t%7===0) spawn(ix,iy);
-
+    const ix=p.left+p.w*0.52,iy=p.top;
+    if(t%7===0)spawn(ix,iy);
     drops=drops.filter(d=>{
-      d.x+=d.vx; d.y+=d.vy; d.vy+=0.22; d.life-=0.022;
+      d.x+=d.vx;d.y+=d.vy;d.vy+=0.22;d.life-=0.022;
       if(d.life<=0)return false;
-      ctx.save();
-      ctx.globalAlpha=d.life;
-      ctx.beginPath();
-      ctx.ellipse(d.x,d.y,d.r*0.6,d.r,0,0,Math.PI*2);
-      ctx.fillStyle=d.col; ctx.fill();
-      ctx.beginPath();
-      ctx.arc(d.x-d.r*0.2,d.y-d.r*0.25,d.r*0.28,0,Math.PI*2);
-      ctx.fillStyle='rgba(255,255,255,0.55)'; ctx.fill();
+      ctx.save();ctx.globalAlpha=d.life;
+      ctx.beginPath();ctx.ellipse(d.x,d.y,d.r*0.6,d.r,0,0,Math.PI*2);
+      ctx.fillStyle=d.col;ctx.fill();
+      ctx.beginPath();ctx.arc(d.x-d.r*0.2,d.y-d.r*0.25,d.r*0.28,0,Math.PI*2);
+      ctx.fillStyle='rgba(255,255,255,0.55)';ctx.fill();
       ctx.restore();
-      if(!d.splashed && d.y>p.top+p.h+4){
+      if(!d.splashed&&d.y>p.top+p.h+4){
         d.splashed=true;
-        for(let s=0;s<3;s++)
-          drops.push({x:d.x,y:d.y,vx:(Math.random()-0.5)*2.5,vy:-Math.random()*1.5,
-            r:1.2,life:0.5,splashed:true,col:d.col});
+        for(let s=0;s<3;s++)drops.push({x:d.x,y:d.y,vx:(Math.random()-0.5)*2.5,vy:-Math.random()*1.5,r:1.2,life:0.5,splashed:true,col:d.col});
       }
       return true;
     });
-
     raf=requestAnimationFrame(frame);
   }
-
-  card.addEventListener('mouseenter',()=>{
-    cancelAnimationFrame(raf);
-    active=true; drops=[]; t=0;
-    raf=requestAnimationFrame(frame);
-  });
-  card.addEventListener('mouseleave',()=>{
-    active=false; drops=[];
-    icon.style.transform='';
-    cancelAnimationFrame(raf); raf=null;
-    const ctx=cvs.getContext('2d');
-    ctx.clearRect(0,0,cvs.width,cvs.height);
-  });
+  card.addEventListener('mouseenter',()=>{cancelAnimationFrame(raf);active=true;drops=[];t=0;raf=requestAnimationFrame(frame);});
+  card.addEventListener('mouseleave',()=>{active=false;drops=[];icon.style.transform='';cancelAnimationFrame(raf);raf=null;const ctx=cvs.getContext('2d');ctx.clearRect(0,0,cvs.width,cvs.height);});
 })();
 
-/* 2. SHIELD */
+/* ── 2. SHIELD (Wazuh) ── */
 (function(){
   const card=document.getElementById('card-shield');
   const icon=document.getElementById('icon-shield');
   const cvs=makeCanvas(card);
   let active=false,raf=null,t=0,sparks=[],phase='in';
-
   function drawSword(ctx,tx,ty,px,py,alpha){
-    ctx.save();
-    ctx.globalAlpha=alpha;
-    const dx=tx-px, dy=ty-py;
-    const len=Math.sqrt(dx*dx+dy*dy);
-    const ux=dx/len, uy=dy/len;
-    const nx=-uy, ny=ux;
-
-    ctx.beginPath();
-    ctx.moveTo(px+nx*3, py+ny*3);
-    ctx.lineTo(tx+nx*0.5, ty+ny*0.5);
-    ctx.lineTo(tx-nx*0.5, ty-ny*0.5);
-    ctx.lineTo(px-nx*3, py-ny*3);
-    ctx.closePath();
-    ctx.fillStyle='rgba(210,215,230,0.95)';
-    ctx.fill();
-    ctx.strokeStyle='rgba(255,255,255,0.4)';
-    ctx.lineWidth=0.5;
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.moveTo(px+nx*1, py+ny*1);
-    ctx.lineTo(tx+nx*0.3, ty+ny*0.3);
-    ctx.strokeStyle='rgba(255,255,255,0.6)';
-    ctx.lineWidth=1;
-    ctx.stroke();
-
-    const gx=px+ux*len*0.22, gy=py+uy*len*0.22;
-    ctx.beginPath();
-    ctx.moveTo(gx+nx*9, gy+ny*9);
-    ctx.lineTo(gx-nx*9, gy-ny*9);
-    ctx.strokeStyle='rgba(212,135,58,0.95)';
-    ctx.lineWidth=3.5;
-    ctx.lineCap='round';
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.arc(px,py,4.5,0,Math.PI*2);
-    ctx.fillStyle='rgba(212,135,58,0.9)';
-    ctx.fill();
-    ctx.strokeStyle='rgba(255,255,255,0.3)';
-    ctx.lineWidth=1;
-    ctx.stroke();
-
+    ctx.save();ctx.globalAlpha=alpha;
+    const dx=tx-px,dy=ty-py,len=Math.sqrt(dx*dx+dy*dy);
+    const ux=dx/len,uy=dy/len,nx=-uy,ny=ux;
+    ctx.beginPath();ctx.moveTo(px+nx*3,py+ny*3);ctx.lineTo(tx+nx*0.5,ty+ny*0.5);ctx.lineTo(tx-nx*0.5,ty-ny*0.5);ctx.lineTo(px-nx*3,py-ny*3);ctx.closePath();
+    ctx.fillStyle='rgba(210,215,230,0.95)';ctx.fill();ctx.strokeStyle='rgba(255,255,255,0.4)';ctx.lineWidth=0.5;ctx.stroke();
+    ctx.beginPath();ctx.moveTo(px+nx*1,py+ny*1);ctx.lineTo(tx+nx*0.3,ty+ny*0.3);ctx.strokeStyle='rgba(255,255,255,0.6)';ctx.lineWidth=1;ctx.stroke();
+    const gx=px+ux*len*0.22,gy=py+uy*len*0.22;
+    ctx.beginPath();ctx.moveTo(gx+nx*9,gy+ny*9);ctx.lineTo(gx-nx*9,gy-ny*9);ctx.strokeStyle='rgba(212,135,58,0.95)';ctx.lineWidth=3.5;ctx.lineCap='round';ctx.stroke();
+    ctx.beginPath();ctx.arc(px,py,4.5,0,Math.PI*2);ctx.fillStyle='rgba(212,135,58,0.9)';ctx.fill();ctx.strokeStyle='rgba(255,255,255,0.3)';ctx.lineWidth=1;ctx.stroke();
     ctx.restore();
   }
-
   function spawnSparks(cx,cy){
-    for(let i=0;i<18;i++){
-      const ang=Math.random()*Math.PI*2, spd=1.2+Math.random()*3;
-      sparks.push({x:cx,y:cy,vx:Math.cos(ang)*spd,vy:Math.sin(ang)*spd,
-        life:1, r:1+Math.random()*2,
-        col:`hsl(${35+Math.random()*25},100%,${65+Math.random()*20}%)`});
-    }
+    for(let i=0;i<18;i++){const ang=Math.random()*Math.PI*2,spd=1.2+Math.random()*3;sparks.push({x:cx,y:cy,vx:Math.cos(ang)*spd,vy:Math.sin(ang)*spd,life:1,r:1+Math.random()*2,col:`hsl(${35+Math.random()*25},100%,${65+Math.random()*20}%)`});}
   }
-
   function frame(){
-    t++;
-    const W=card.offsetWidth, H=card.offsetHeight;
-    cvs.width=W; cvs.height=H;
-    const ctx=cvs.getContext('2d');
-    ctx.clearRect(0,0,W,H);
-
-    if(!active){ sparks=[]; icon.style.filter=''; icon.style.transform=''; return; }
-
-    const p=iconPos(icon,card);
-    const cx=p.x, cy=p.y;
-    const L=28;
-
-    const s1tip  ={x:cx+L*0.72, y:cy-L*0.72};
-    const s1pom  ={x:cx-L*0.72, y:cy+L*0.72};
-    const s2tip  ={x:cx-L*0.72, y:cy-L*0.72};
-    const s2pom  ={x:cx+L*0.72, y:cy+L*0.72};
-
+    t++;const W=card.offsetWidth,H=card.offsetHeight;cvs.width=W;cvs.height=H;
+    const ctx=cvs.getContext('2d');ctx.clearRect(0,0,W,H);
+    if(!active){sparks=[];icon.style.filter='';icon.style.transform='';return;}
+    const p=iconPos(icon,card),cx=p.x,cy=p.y,L=28;
+    const s1tip={x:cx+L*0.72,y:cy-L*0.72},s1pom={x:cx-L*0.72,y:cy+L*0.72};
+    const s2tip={x:cx-L*0.72,y:cy-L*0.72},s2pom={x:cx+L*0.72,y:cy+L*0.72};
     if(phase==='in'){
-      const prog=Math.min(1, t/35);
-      const ease=1-Math.pow(1-prog,3);
-
-      const s1t_x=s1tip.x+(1-ease)*(-W*0.3), s1t_y=s1tip.y+(1-ease)*(H*0.3);
-      const s1p_x=s1pom.x+(1-ease)*(-W*0.3), s1p_y=s1pom.y+(1-ease)*(H*0.3);
-      const s2t_x=s2tip.x+(1-ease)*(W*0.3),  s2t_y=s2tip.y+(1-ease)*(H*0.3);
-      const s2p_x=s2pom.x+(1-ease)*(W*0.3),  s2p_y=s2pom.y+(1-ease)*(H*0.3);
-
-      drawSword(ctx, s1t_x,s1t_y, s1p_x,s1p_y, ease);
-      drawSword(ctx, s2t_x,s2t_y, s2p_x,s2p_y, ease);
-
-      if(prog>=1){ phase='clash'; t=0; }
-
-    } else if(phase==='clash'){
-      drawSword(ctx, s1tip.x,s1tip.y, s1pom.x,s1pom.y, 1);
-      drawSword(ctx, s2tip.x,s2tip.y, s2pom.x,s2pom.y, 1);
-      if(t===1) spawnSparks(cx,cy);
-      const flash=Math.max(0, 1-t/15);
-      ctx.save();
-      ctx.beginPath(); ctx.arc(cx,cy,20*flash,0,Math.PI*2);
+      const prog=Math.min(1,t/35),ease=1-Math.pow(1-prog,3);
+      const s1t_x=s1tip.x+(1-ease)*(-W*0.3),s1t_y=s1tip.y+(1-ease)*(H*0.3);
+      const s1p_x=s1pom.x+(1-ease)*(-W*0.3),s1p_y=s1pom.y+(1-ease)*(H*0.3);
+      const s2t_x=s2tip.x+(1-ease)*(W*0.3),s2t_y=s2tip.y+(1-ease)*(H*0.3);
+      const s2p_x=s2pom.x+(1-ease)*(W*0.3),s2p_y=s2pom.y+(1-ease)*(H*0.3);
+      drawSword(ctx,s1t_x,s1t_y,s1p_x,s1p_y,ease);drawSword(ctx,s2t_x,s2t_y,s2p_x,s2p_y,ease);
+      if(prog>=1){phase='clash';t=0;}
+    }else if(phase==='clash'){
+      drawSword(ctx,s1tip.x,s1tip.y,s1pom.x,s1pom.y,1);drawSword(ctx,s2tip.x,s2tip.y,s2pom.x,s2pom.y,1);
+      if(t===1)spawnSparks(cx,cy);
+      const flash=Math.max(0,1-t/15);
+      ctx.save();ctx.beginPath();ctx.arc(cx,cy,20*flash,0,Math.PI*2);
       const g=ctx.createRadialGradient(cx,cy,0,cx,cy,20*flash);
-      g.addColorStop(0,`rgba(255,240,120,${flash*0.9})`);
-      g.addColorStop(1,'rgba(255,200,50,0)');
-      ctx.fillStyle=g; ctx.fill(); ctx.restore();
-
-      if(t>15){ phase='pulse'; t=0; }
-
-    } else {
-      drawSword(ctx, s1tip.x,s1tip.y, s1pom.x,s1pom.y, 1);
-      drawSword(ctx, s2tip.x,s2tip.y, s2pom.x,s2pom.y, 1);
+      g.addColorStop(0,`rgba(255,240,120,${flash*0.9})`);g.addColorStop(1,'rgba(255,200,50,0)');
+      ctx.fillStyle=g;ctx.fill();ctx.restore();
+      if(t>15){phase='pulse';t=0;}
+    }else{
+      drawSword(ctx,s1tip.x,s1tip.y,s1pom.x,s1pom.y,1);drawSword(ctx,s2tip.x,s2tip.y,s2pom.x,s2pom.y,1);
       const glow=0.25+Math.sin(t*0.08)*0.15;
-      ctx.save();
-      ctx.beginPath(); ctx.arc(cx,cy,8,0,Math.PI*2);
-      ctx.fillStyle=`rgba(255,220,80,${glow})`; ctx.fill();
-      ctx.restore();
+      ctx.save();ctx.beginPath();ctx.arc(cx,cy,8,0,Math.PI*2);ctx.fillStyle=`rgba(255,220,80,${glow})`;ctx.fill();ctx.restore();
       icon.style.filter=`drop-shadow(0 0 ${5+Math.sin(t*0.08)*3}px rgba(255,200,50,0.8))`;
     }
-
     sparks=sparks.filter(s=>{
-      s.x+=s.vx; s.y+=s.vy; s.vy+=0.1; s.life-=0.035;
-      if(s.life<=0)return false;
-      ctx.save(); ctx.globalAlpha=s.life;
-      ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-      ctx.fillStyle=s.col; ctx.fill(); ctx.restore();
+      s.x+=s.vx;s.y+=s.vy;s.vy+=0.1;s.life-=0.035;if(s.life<=0)return false;
+      ctx.save();ctx.globalAlpha=s.life;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=s.col;ctx.fill();ctx.restore();
       return true;
     });
-
     raf=requestAnimationFrame(frame);
   }
-
-  card.addEventListener('mouseenter',()=>{
-    cancelAnimationFrame(raf);
-    active=true; sparks=[]; t=0; phase='in';
-    raf=requestAnimationFrame(frame);
-  });
-  card.addEventListener('mouseleave',()=>{
-    active=false; sparks=[];
-    icon.style.filter=''; icon.style.transform='';
-    cancelAnimationFrame(raf); raf=null;
-    const ctx=cvs.getContext('2d');
-    ctx.clearRect(0,0,cvs.width,cvs.height);
-  });
+  card.addEventListener('mouseenter',()=>{cancelAnimationFrame(raf);active=true;sparks=[];t=0;phase='in';raf=requestAnimationFrame(frame);});
+  card.addEventListener('mouseleave',()=>{active=false;sparks=[];icon.style.filter='';icon.style.transform='';cancelAnimationFrame(raf);raf=null;const ctx=cvs.getContext('2d');ctx.clearRect(0,0,cvs.width,cvs.height);});
 })();
 
-/* 3. PHONE */
+/* ── 3. PHONE (Asterisk) ── */
 (function(){
   const card=document.getElementById('card-phone');
   const icon=document.getElementById('icon-phone');
   const cvs=makeCanvas(card);
   let active=false,raf=null,t=0,rings=[];
-
   function frame(){
-    t++;
-    const W=card.offsetWidth, H=card.offsetHeight;
-    cvs.width=W; cvs.height=H;
-    const ctx=cvs.getContext('2d');
-    ctx.clearRect(0,0,W,H);
-
-    const p=iconPos(icon,card);
-    const cx=p.x, cy=p.y;
-
+    t++;const W=card.offsetWidth,H=card.offsetHeight;cvs.width=W;cvs.height=H;
+    const ctx=cvs.getContext('2d');ctx.clearRect(0,0,W,H);
+    const p=iconPos(icon,card);const cx=p.x,cy=p.y;
     icon.style.transform=`translateY(${Math.sin(t*0.9)*2.5}px)`;
-
-    if(t%20===0) rings.push({x:cx,y:cy,r:p.w*0.5,life:1});
-
+    if(t%20===0)rings.push({x:cx,y:cy,r:p.w*0.5,life:1});
     rings=rings.filter(rg=>{
-      rg.r+=2.2; rg.life-=0.026;
-      if(rg.life<=0)return false;
-      ctx.beginPath(); ctx.arc(rg.x,rg.y,rg.r,0,Math.PI*2);
-      ctx.strokeStyle=`rgba(212,135,58,${rg.life*0.65})`;
-      ctx.lineWidth=2.2*rg.life; ctx.stroke();
+      rg.r+=2.2;rg.life-=0.026;if(rg.life<=0)return false;
+      ctx.beginPath();ctx.arc(rg.x,rg.y,rg.r,0,Math.PI*2);
+      ctx.strokeStyle=`rgba(212,135,58,${rg.life*0.65})`;ctx.lineWidth=2.2*rg.life;ctx.stroke();
       return true;
     });
-
-    if(active) raf=requestAnimationFrame(frame);
-    else{ icon.style.transform=''; ctx.clearRect(0,0,W,H); }
+    if(active)raf=requestAnimationFrame(frame);
+    else{icon.style.transform='';ctx.clearRect(0,0,W,H);}
   }
-
   card.addEventListener('mouseenter',()=>{active=true;rings=[];t=0;cancelAnimationFrame(raf);raf=requestAnimationFrame(frame);});
   card.addEventListener('mouseleave',()=>{active=false;icon.style.transform='';});
 })();
 
-/* 4. LOCK */
+/* ── 4. BRAIN (LLM — NEW) ── floating token animation ── */
 (function(){
-  const card=document.getElementById('card-lock');
-  const icon=document.getElementById('icon-lock');
+  const card=document.getElementById('card-brain');
+  const icon=document.getElementById('icon-brain');
   const cvs=makeCanvas(card);
-  let active=false,raf=null,t=0;
+  let active=false,raf=null,t=0,tokens=[];
+  const WORDS=['AI','LLM','>_','🤖','Qwen','ML','GPU','NLP','ctx','py','API','inf'];
 
-  function drawKey(ctx,x,y,angle,alpha){
-    ctx.save();
-    ctx.globalAlpha=alpha;
-    ctx.translate(x,y); ctx.rotate(angle);
-    ctx.beginPath(); ctx.arc(-14,0,7,0,Math.PI*2);
-    ctx.strokeStyle='#f0b870'; ctx.lineWidth=2.5; ctx.stroke();
-    ctx.beginPath(); ctx.arc(-14,0,3.5,0,Math.PI*2);
-    ctx.fillStyle='rgba(240,184,112,0.5)'; ctx.fill();
-    ctx.beginPath(); ctx.moveTo(-7,0); ctx.lineTo(14,0);
-    ctx.strokeStyle='#f0b870'; ctx.lineWidth=2.5; ctx.lineCap='round'; ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(4,0); ctx.lineTo(4,5);
-    ctx.moveTo(8,0); ctx.lineTo(8,4);
-    ctx.moveTo(12,0); ctx.lineTo(12,6);
-    ctx.lineWidth=2; ctx.stroke();
-    ctx.restore();
+  function spawnToken(cx,cy){
+    const word=WORDS[Math.floor(Math.random()*WORDS.length)];
+    const angle=-Math.PI/2+(Math.random()-0.5)*1.2;
+    const spd=0.6+Math.random()*0.8;
+    tokens.push({
+      x:cx+(Math.random()-0.5)*20,
+      y:cy,
+      vx:Math.cos(angle)*spd,
+      vy:Math.sin(angle)*spd,
+      word,
+      life:1,
+      size:9+Math.random()*5,
+      hue:190+Math.random()*60
+    });
   }
 
   function frame(){
     t++;
-    const W=card.offsetWidth, H=card.offsetHeight;
-    cvs.width=W; cvs.height=H;
+    const W=card.offsetWidth,H=card.offsetHeight;
+    cvs.width=W;cvs.height=H;
     const ctx=cvs.getContext('2d');
     ctx.clearRect(0,0,W,H);
+    if(!active){tokens=[];icon.style.filter='';icon.style.transform='';return;}
 
-    icon.style.transform='none';
-    const p=iconPos(icon,card);
-    const lx=p.x, ly=p.y;
+    /* gentle pulse on icon */
+    const pulse=1+Math.sin(t*0.08)*0.06;
+    icon.style.transform=`scale(${pulse})`;
+    icon.style.transformOrigin='center';
+    icon.style.filter=`drop-shadow(0 0 ${6+Math.sin(t*0.08)*4}px rgba(130,180,255,0.75))`;
 
-    const cycle=t%120;
-
-    if(cycle<40){
-      const prog=cycle/40;
-      const ease=prog<0.5?2*prog*prog:1-Math.pow(-2*prog+2,2)/2;
-      const startX=W*0.78, startY=p.top-10;
-      const kx=startX+(lx+14-startX)*ease;
-      const ky=startY+(ly-startY)*ease;
-      const ang=-0.3+ease*0.3;
-      drawKey(ctx,kx,ky,ang,1);
-      icon.textContent='🔓'; icon.style.filter='';
-    } else if(cycle<70){
-      const sub=cycle-40, prog=sub/30;
-      drawKey(ctx,lx+14,ly,0,1-prog);
-      icon.textContent=sub>10?'🔐':'🔓';
-      icon.style.filter=`drop-shadow(0 0 ${sub*0.4}px rgba(90,210,90,0.8))`;
-    } else if(cycle<90){
-      const flash=(90-cycle)/20;
-      icon.textContent='🔐';
-      icon.style.filter=`drop-shadow(0 0 ${flash*16}px rgba(90,210,90,${flash}))`;
-      ctx.fillStyle=`rgba(90,210,90,${flash*0.15})`; ctx.fillRect(0,0,W,H);
-    } else {
-      icon.textContent='🔐';
-      const glow=5+Math.sin((cycle-90)*0.15)*3;
-      icon.style.filter=`drop-shadow(0 0 ${glow}px rgba(90,210,90,0.7))`;
+    /* spawn tokens */
+    if(t%18===0){
+      const p=iconPos(icon,card);
+      spawnToken(p.x,p.y);
     }
 
-    if(active) raf=requestAnimationFrame(frame);
-    else{ icon.textContent='🔓'; icon.style.transform=''; icon.style.filter=''; ctx.clearRect(0,0,W,H); }
+    /* draw subtle connection lines between nearby tokens */
+    ctx.save();
+    for(let i=0;i<tokens.length;i++){
+      for(let j=i+1;j<tokens.length;j++){
+        const dx=tokens[i].x-tokens[j].x,dy=tokens[i].y-tokens[j].y;
+        const dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<80){
+          ctx.beginPath();
+          ctx.moveTo(tokens[i].x,tokens[i].y);
+          ctx.lineTo(tokens[j].x,tokens[j].y);
+          const alpha=(1-dist/80)*0.18*Math.min(tokens[i].life,tokens[j].life);
+          ctx.strokeStyle=`rgba(130,180,255,${alpha})`;
+          ctx.lineWidth=1;
+          ctx.stroke();
+        }
+      }
+    }
+    ctx.restore();
+
+    /* update and draw tokens */
+    tokens=tokens.filter(tk=>{
+      tk.x+=tk.vx;
+      tk.y+=tk.vy;
+      tk.vy-=0.012;          /* slight float upward */
+      tk.vx*=0.995;
+      tk.life-=0.012;
+      if(tk.life<=0)return false;
+
+      const alpha=tk.life<0.25?tk.life/0.25:1;
+      ctx.save();
+      ctx.globalAlpha=alpha*0.92;
+      ctx.font=`600 ${tk.size}px 'DM Sans',monospace`;
+      ctx.fillStyle=`hsl(${tk.hue},80%,72%)`;
+      ctx.textAlign='center';
+      ctx.textBaseline='middle';
+
+      /* subtle glow behind text */
+      ctx.shadowColor=`hsl(${tk.hue},90%,70%)`;
+      ctx.shadowBlur=6;
+      ctx.fillText(tk.word,tk.x,tk.y);
+      ctx.restore();
+      return true;
+    });
+
+    raf=requestAnimationFrame(frame);
   }
 
-  card.addEventListener('mouseenter',()=>{active=true;t=0;cancelAnimationFrame(raf);raf=requestAnimationFrame(frame);});
-  card.addEventListener('mouseleave',()=>{active=false;icon.textContent='🔓';icon.style.transform='';icon.style.filter='';});
+  card.addEventListener('mouseenter',()=>{
+    cancelAnimationFrame(raf);active=true;tokens=[];t=0;
+    raf=requestAnimationFrame(frame);
+  });
+  card.addEventListener('mouseleave',()=>{
+    active=false;tokens=[];
+    icon.style.filter='';icon.style.transform='';
+    cancelAnimationFrame(raf);raf=null;
+    const ctx=cvs.getContext('2d');ctx.clearRect(0,0,cvs.width,cvs.height);
+  });
 })();
 
-/* 5. GEAR */
+/* ── 5. GEAR (Ansible) ── */
 (function(){
   const card=document.getElementById('card-gear');
   const icon=document.getElementById('icon-gear');
   let active=false,raf=null,angle=0,omega=0;
-
   function frame(){
-    if(active){
-      omega+=0.06;   // torque only while hovered
-      omega*=0.92;   // spin-up friction
-    } else {
-      omega*=0.82;   // decelerate on leave
-    }
+    if(active){omega+=0.06;omega*=0.92;}
+    else{omega*=0.82;}
     angle+=omega;
     icon.style.transform=`rotate(${angle}rad)`;
     icon.style.transformOrigin='center';
-    if(Math.abs(omega)>0.002){
-      raf=requestAnimationFrame(frame);
-    } else {
-      icon.style.transform='';
-      icon.style.transformOrigin='';
-      raf=null;
-    }
+    if(Math.abs(omega)>0.002){raf=requestAnimationFrame(frame);}
+    else{icon.style.transform='';icon.style.transformOrigin='';raf=null;}
   }
-
-  card.addEventListener('mouseenter',()=>{
-    cancelAnimationFrame(raf);
-    active=true;
-    raf=requestAnimationFrame(frame);
-  });
-  card.addEventListener('mouseleave',()=>{ active=false; });
+  card.addEventListener('mouseenter',()=>{cancelAnimationFrame(raf);active=true;raf=requestAnimationFrame(frame);});
+  card.addEventListener('mouseleave',()=>{active=false;});
 })();
 
-/* 6. STORAGE */
+/* ── 6. STORAGE ── */
 (function(){
   const card=document.getElementById('card-disk');
   const icon=document.getElementById('icon-disk');
   const cvs=makeCanvas(card);
   let active=false,raf=null,t=0,files=[];
-  const fileTypes=[
-    {label:'NFS',col:'#5dba5d'},
-    {label:'SMB',col:'#f0b870'},
-    {label:'FTP',col:'#66c8ff'},
-  ];
-
+  const fileTypes=[{label:'NFS',col:'#5dba5d'},{label:'SMB',col:'#f0b870'},{label:'FTP',col:'#66c8ff'}];
   function bez(p0x,p0y,cpx,cpy,p1x,p1y,t){
     const m=1-t;
-    return{x:m*m*p0x+2*m*t*cpx+t*t*p1x, y:m*m*p0y+2*m*t*cpy+t*t*p1y};
+    return{x:m*m*p0x+2*m*t*cpx+t*t*p1x,y:m*m*p0y+2*m*t*cpy+t*t*p1y};
   }
-
   function drawServer(ctx,x,y){
-    ctx.save(); ctx.translate(x,y);
-    ctx.fillStyle='rgba(46,26,9,0.85)';
-    ctx.strokeStyle='rgba(212,135,58,0.8)'; ctx.lineWidth=1.5;
-    ctx.beginPath(); ctx.roundRect(-14,-22,28,44,3); ctx.fill(); ctx.stroke();
+    ctx.save();ctx.translate(x,y);
+    ctx.fillStyle='rgba(46,26,9,0.85)';ctx.strokeStyle='rgba(212,135,58,0.8)';ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.roundRect(-14,-22,28,44,3);ctx.fill();ctx.stroke();
     for(let i=0;i<3;i++){
-      ctx.fillStyle='rgba(212,135,58,0.5)'; ctx.fillRect(-10,-16+i*12,20,7);
-      ctx.beginPath(); ctx.arc(8,-12.5+i*12,2,0,Math.PI*2);
-      ctx.fillStyle=i===0?`rgba(90,210,90,${0.7+Math.sin(t*0.15+i)*0.3})`:'rgba(212,135,58,0.4)';
-      ctx.fill();
+      ctx.fillStyle='rgba(212,135,58,0.5)';ctx.fillRect(-10,-16+i*12,20,7);
+      ctx.beginPath();ctx.arc(8,-12.5+i*12,2,0,Math.PI*2);
+      ctx.fillStyle=i===0?`rgba(90,210,90,${0.7+Math.sin(t*0.15+i)*0.3})`:'rgba(212,135,58,0.4)';ctx.fill();
     }
-    ctx.font='bold 7px monospace'; ctx.fillStyle='rgba(240,184,112,0.9)';
-    ctx.textAlign='center'; ctx.fillText('SRV',0,30);
-    ctx.restore();
+    ctx.font='bold 7px monospace';ctx.fillStyle='rgba(240,184,112,0.9)';
+    ctx.textAlign='center';ctx.fillText('SRV',0,30);ctx.restore();
   }
-
   function drawFileIcon(ctx,x,y,label,col,alpha){
-    ctx.save(); ctx.globalAlpha=alpha; ctx.translate(x,y);
-    ctx.fillStyle='rgba(254,249,240,0.95)';
-    ctx.strokeStyle=col; ctx.lineWidth=1.5;
-    ctx.beginPath();
-    ctx.moveTo(-8,-10); ctx.lineTo(5,-10); ctx.lineTo(10,-5);
-    ctx.lineTo(10,10); ctx.lineTo(-8,10); ctx.closePath();
-    ctx.fill(); ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(5,-10); ctx.lineTo(5,-5); ctx.lineTo(10,-5);
-    ctx.lineWidth=1; ctx.stroke();
-    ctx.font='bold 5px monospace'; ctx.fillStyle=col;
-    ctx.textAlign='center'; ctx.textBaseline='middle';
-    ctx.fillText(label,0,2);
+    ctx.save();ctx.globalAlpha=alpha;ctx.translate(x,y);
+    ctx.fillStyle='rgba(254,249,240,0.95)';ctx.strokeStyle=col;ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(-8,-10);ctx.lineTo(5,-10);ctx.lineTo(10,-5);ctx.lineTo(10,10);ctx.lineTo(-8,10);ctx.closePath();
+    ctx.fill();ctx.stroke();
+    ctx.beginPath();ctx.moveTo(5,-10);ctx.lineTo(5,-5);ctx.lineTo(10,-5);ctx.lineWidth=1;ctx.stroke();
+    ctx.font='bold 5px monospace';ctx.fillStyle=col;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(label,0,2);
     ctx.restore();
   }
-
   function frame(){
-    t++;
-    const W=card.offsetWidth, H=card.offsetHeight;
-    cvs.width=W; cvs.height=H;
-    const ctx=cvs.getContext('2d');
-    ctx.clearRect(0,0,W,H);
-
-    icon.style.transform=`scale(${1+Math.sin(t*0.06)*0.04})`;
-    icon.style.transformOrigin='left top';
-
-    const p=iconPos(icon,card);
-    const sx=p.x, sy=p.y;
-    const tx=W-28, ty=H-34;
-
+    t++;const W=card.offsetWidth,H=card.offsetHeight;cvs.width=W;cvs.height=H;
+    const ctx=cvs.getContext('2d');ctx.clearRect(0,0,W,H);
+    icon.style.transform=`scale(${1+Math.sin(t*0.06)*0.04})`;icon.style.transformOrigin='left top';
+    const p=iconPos(icon,card),sx=p.x,sy=p.y,tx=W-28,ty=H-34;
     drawServer(ctx,tx,ty);
-
-    ctx.save(); ctx.setLineDash([4,6]);
-    ctx.strokeStyle='rgba(212,135,58,0.12)'; ctx.lineWidth=1;
-    ctx.beginPath(); ctx.moveTo(sx,sy);
-    ctx.quadraticCurveTo((sx+tx)/2,(Math.min(sy,ty)-40),tx,ty);
-    ctx.stroke(); ctx.setLineDash([]); ctx.restore();
-
+    ctx.save();ctx.setLineDash([4,6]);ctx.strokeStyle='rgba(212,135,58,0.12)';ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(sx,sy);ctx.quadraticCurveTo((sx+tx)/2,(Math.min(sy,ty)-40),tx,ty);
+    ctx.stroke();ctx.setLineDash([]);ctx.restore();
     if(t%30===0){
       const fi=fileTypes[Math.floor(Math.random()*fileTypes.length)];
-      const cpx=(sx+tx)/2+(Math.random()-0.5)*50;
-      const cpy=Math.min(sy,ty)-35-Math.random()*25;
+      const cpx=(sx+tx)/2+(Math.random()-0.5)*50,cpy=Math.min(sy,ty)-35-Math.random()*25;
       files.push({sx,sy,tx,ty,cpx,cpy,prog:0,speed:0.008+Math.random()*0.005,...fi});
     }
-
     files=files.filter(f=>{
-      f.prog+=f.speed;
-      if(f.prog>1)return false;
+      f.prog+=f.speed;if(f.prog>1)return false;
       const pos=bez(f.sx,f.sy,f.cpx,f.cpy,f.tx,f.ty,f.prog);
       const alpha=f.prog<0.1?f.prog*10:f.prog>0.85?(1-f.prog)/0.15:1;
-      drawFileIcon(ctx,pos.x,pos.y,f.label,f.col,alpha);
-      return true;
+      drawFileIcon(ctx,pos.x,pos.y,f.label,f.col,alpha);return true;
     });
-
-    if(active) raf=requestAnimationFrame(frame);
-    else{ icon.style.transform=''; ctx.clearRect(0,0,W,H); }
+    if(active)raf=requestAnimationFrame(frame);
+    else{icon.style.transform='';ctx.clearRect(0,0,W,H);}
   }
-
   card.addEventListener('mouseenter',()=>{active=true;files=[];t=0;cancelAnimationFrame(raf);raf=requestAnimationFrame(frame);});
   card.addEventListener('mouseleave',()=>{active=false;icon.style.transform='';});
 })();
