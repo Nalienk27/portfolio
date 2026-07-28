@@ -199,9 +199,9 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
 
   <div class="hero-wrap">
     <div class="hero">
-      <div class="open-badge"><span class="open-badge-dot"></span>Open to work · Linux Administrator · Cloud Engineer</div>
-      <h1>Linux <em>Administrator</em><br>&amp; Infrastructure Engineer</h1>
-      <p class="hero-sub">Infrastructure automation specialist with 1.8 years of hands-on experience managing 50+ servers across on-premises and VMware ESXi environments. Expert in Ansible, Wazuh XDR, and enterprise security monitoring — with a proven record of zero data loss across 5+ emergency recoveries.</p>
+      <div class="open-badge"><span class="open-badge-dot"></span>Open to work · Linux Administrator · Cloud Engineer · DevOps Engineer</div>
+      <h1>Linux <em>Administrator</em></h1>
+      <p class="hero-sub">Infrastructure automation specialist with 1.9 years of hands-on experience managing 50+ servers across on-premises and VMware ESXi environments. Expert in Ansible, Wazuh XDR, and enterprise security monitoring — with a proven record of zero data loss across 5+ emergency recoveries.</p>
       <div class="hero-roles">
         <span class="role-pill">On-Premises Infrastructure</span>
         <span class="role-pill">Cloud (Azure)</span>
@@ -265,12 +265,12 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
     <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
 
-      <!-- 0: Docker RustDesk -->
+      <!-- 0: Self-Hosted IT Tool Portal -->
       <div class="project-card" id="card-whale" onclick="showDetail(0)">
         <div class="project-icon-row" id="icon-whale">🐳</div>
-        <div class="project-name">Dockerized RustDesk Self-Hosted</div>
-        <p class="project-desc">Containerized RustDesk with persistent volumes and automatic restart policies — a secure, self-hosted remote access alternative eliminating third-party licensing.</p>
-        <div class="project-tags"><span class="ptag">Docker</span><span class="ptag">RustDesk</span><span class="ptag">Containerization</span></div>
+        <div class="project-name">Self-Hosted IT Tool Portal</div>
+        <p class="project-desc">Multi-stage Dockerized deployment consolidating vendor tool downloads into a single internal portal, with a React/Vite frontend and Express/MySQL backend orchestrated via Docker Compose.</p>
+        <div class="project-tags"><span class="ptag">Docker</span><span class="ptag">React</span><span class="ptag">Node.js</span></div>
       </div>
 
       <!-- 1: Wazuh XDR -->
@@ -289,7 +289,7 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
         <div class="project-tags"><span class="ptag">Asterisk</span><span class="ptag">PBX</span><span class="ptag">VoIP</span></div>
       </div>
 
-      <!-- 3: Self-Hosted LLM (NEW — replaced OpenLDAP) -->
+      <!-- 3: Self-Hosted LLM -->
       <div class="project-card" id="card-brain" onclick="showDetail(3)">
         <div class="project-icon-row" id="icon-brain">🧠</div>
         <div class="project-name">Self-Hosted LLM (Qwen) with Open WebUI</div>
@@ -305,12 +305,12 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
         <div class="project-tags"><span class="ptag">Ansible</span><span class="ptag">Git</span><span class="ptag">Semaphore</span></div>
       </div>
 
-      <!-- 5: Storage -->
-      <div class="project-card" id="card-disk" onclick="showDetail(5)">
-        <div class="project-icon-row" id="icon-disk">💾</div>
-        <div class="project-name">Enterprise Storage Solutions</div>
-        <p class="project-desc">Managed NFS, Samba, and VSFTP file services for 5+ client environments with LDAP integration, eliminating recurring weekly manual interventions.</p>
-        <div class="project-tags"><span class="ptag">NFS</span><span class="ptag">Samba</span><span class="ptag">VSFTP</span></div>
+      <!-- 5: Azure Cloud Lab -->
+      <div class="project-card" id="card-azure" onclick="showDetail(5)">
+        <div class="project-icon-row" id="icon-azure">☁️</div>
+        <div class="project-name">Azure Cloud Infrastructure Lab</div>
+        <p class="project-desc">Hands-on Azure environment provisioning VMs, Storage Accounts, and Resource Groups, secured with custom NSG rules and Microsoft Entra ID — built as part of AZ-104 exam preparation.</p>
+        <div class="project-tags"><span class="ptag">Azure</span><span class="ptag">NSG</span><span class="ptag">Entra ID</span></div>
       </div>
 
     </div>
@@ -324,7 +324,7 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
       <div class="competency-grid">
         <div class="category-box">
           <div class="skill-group-label">Operating Systems &amp; Virtualization</div>
-          <div class="skill-chips"><span class="chip">RHEL / CentOS 7/8/9</span><span class="chip">Rocky Linux 8/9</span><span class="chip">Ubuntu 20.04 / 22.04</span><span class="chip">VMware ESXi</span><span class="chip">KVM</span></div>
+          <div class="skill-chips"><span class="chip">RHEL / CentOS 7/8/9</span><span class="chip">Rocky Linux 8/9</span><span class="chip">Ubuntu 20.04 / 22.04</span><span class="chip">VMware ESXi</span></div>
         </div>
         <div class="category-box">
           <div class="skill-group-label">Automation &amp; DevOps</div>
@@ -332,11 +332,15 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
         </div>
         <div class="category-box">
           <div class="skill-group-label">Security &amp; Networking</div>
-          <div class="skill-chips"><span class="chip">Wazuh XDR / SIEM</span><span class="chip">SELinux</span><span class="chip">FirewallD</span><span class="chip">Fail2Ban</span><span class="chip">OpenLDAP / SSSD</span><span class="chip">SonicWall</span><span class="chip">Bastion Host</span><span class="chip">VPN Configuration</span></div>
+          <div class="skill-chips"><span class="chip">Wazuh XDR / SIEM</span><span class="chip">SELinux</span><span class="chip">FirewallD</span><span class="chip">Fail2Ban</span><span class="chip">SonicWall</span><span class="chip">Bastion Host</span></div>
         </div>
         <div class="category-box">
           <div class="skill-group-label">Web &amp; Storage Services</div>
           <div class="skill-chips"><span class="chip">NGINX / Apache HTTPD</span><span class="chip">MySQL / MariaDB</span><span class="chip">Asterisk PBX</span><span class="chip">NFS / Samba / VSFTP</span><span class="chip">LVM / Storage Management</span></div>
+        </div>
+        <div class="category-box">
+          <div class="skill-group-label">Cloud (Azure)</div>
+          <div class="skill-chips"><span class="chip">Virtual Machines</span><span class="chip">Storage Accounts</span><span class="chip">Network Security Groups</span><span class="chip">Resource Groups</span><span class="chip">Microsoft Entra ID (basics)</span><span class="chip">AZ-104 in progress</span></div>
         </div>
         <div class="category-box">
           <div class="skill-group-label">Monitoring &amp; Observability</div>
@@ -374,7 +378,7 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
           <span class="edu-sep">·</span>
           <span class="edu-location">Namakkal, Tamil Nadu</span>
           <span class="edu-sep">·</span>
-          <span class="cert-badge">2024 · Completed</span>
+          <span class="cert-badge">2020 – 2024 · Completed</span>
         </div>
       </div>
     </div>
@@ -403,7 +407,7 @@ footer{border-top:1px solid var(--sand-300);padding:26px 5vw;font-size:12px;colo
 
   <footer>
     <span>© 2026 Nalien A · Bangalore, India</span>
-    <span>Linux Administrator &amp; Infrastructure Engineer</span>
+    <span>Linux Administrator</span>
   </footer>
 </div>
 
@@ -425,12 +429,12 @@ function navTo(id){
 
 /* ── project data ── */
 const projects=[
-  /* 0 */ {icon:"🐳",title:"Dockerized RustDesk Self-Hosted",subtitle:"Secure, self-hosted remote access solution using Docker containerization",problem:"Client organizations depended on commercial remote access tools with recurring licensing costs and limited data sovereignty.",solution:"Containerized RustDesk using custom Docker images with persistent volumes for configuration and database storage. Implemented automatic restart policies, Docker Compose configurations, and persistent storage.",outcomes:["Eliminated third-party licensing dependency","Full data sovereignty — all remote sessions on-premises","Reduced setup time from 2+ hours to 15 minutes","Zero downtime updates and maintenance"],tech:["Docker","Docker Compose","RustDesk","Linux","Persistent Volumes"]},
+  /* 0 */ {icon:"🐳",title:"Self-Hosted IT Tool Portal",subtitle:"Multi-stage Dockerized deployment consolidating internal software access into one destination",problem:"The team previously visited each vendor's website individually to download and install applications, creating friction and inconsistent access across the organization.",solution:"Built and hosted a centralized internal IT tool portal using a multi-stage Dockerfile that separates the React/Vite frontend build from the Express backend runtime, copying only compiled frontend assets into the production image. Orchestrated the full stack — Node.js/Express backend and MySQL 8.0 database — with Docker Compose, using named volumes for persistent storage and an isolated bridge network for inter-service communication.",outcomes:["Consolidated software access into a single internal destination","Cut per-application discovery and download time for the team","Lean production image free of build-time dependencies","Persistent database and file storage via named Docker volumes"],tech:["Docker","Docker Compose","Node.js (Express)","React (Vite)","MySQL","NGINX"]},
   /* 1 */ {icon:"🛡️",title:"Wazuh XDR Centralized Security Monitoring",subtitle:"Enterprise SIEM/XDR platform for comprehensive threat detection across 50+ endpoints",problem:"50+ servers had no centralised security visibility. Incident detection was entirely manual, leaving the fleet exposed to threats going undetected for hours.",solution:"Architected a centralized Wazuh XDR platform with agents deployed across 50+ Linux and Windows endpoints. Configured custom alert rules, agent groups, active response policies, log analysis pipelines, and compliance dashboards for real-time incident triage.",outcomes:["Reduced incident detection from hours to under 15 minutes","Real-time alerting across all 50+ Linux and Windows endpoints","Automated compliance reporting","Active response policies blocking threats automatically"],tech:["Wazuh","SIEM / XDR","Log Analysis","Alert Rules","Compliance Dashboards","Linux","Windows Server"]},
   /* 2 */ {icon:"☎️",title:"Asterisk PBX Implementation",subtitle:"Enterprise telephony system compiled from source with full customization",problem:"Client was paying substantial monthly fees for a hosted PBX solution with limited customization and vendor lock-in.",solution:"Compiled Asterisk from source on Linux, configured SIP trunks, extension dial plans, voicemail, and IVR menus. Set up redundancy and failover for high availability.",outcomes:["Reduced telephony costs by 35%","Full control over telephony infrastructure","Eliminated vendor lock-in","99.5% uptime maintained"],tech:["Asterisk","SIP Trunks","VoIP","Linux","Dial Plans","IVR"]},
   /* 3 — NEW LLM */ {icon:"🧠",title:"Self-Hosted LLM (Qwen) with Open WebUI",subtitle:"Privacy-preserving AI assistant for the internal developer team — zero external API dependency",problem:"The developer team wanted access to an AI assistant but had privacy and cost concerns about sending data to external cloud APIs. There was no internal AI tooling in place.",solution:"Provisioned an Ubuntu server and deployed the Qwen large language model locally using Ollama and Python. Configured Open WebUI as a browser-based chat interface so all team members could interact with the model without any CLI knowledge. Set up persistent model storage and service auto-restart on boot.",outcomes:["Fully self-hosted — all inference runs on-premises, no data leaves the network","Zero ongoing API cost after initial setup","Developer team onboarded to AI tooling without any CLI access required","Model served persistently with auto-restart on server reboot"],tech:["Python","Ollama","Qwen LLM","Open WebUI","Ubuntu Linux","systemd"]},
   /* 4 */ {icon:"⚙️",title:"Ansible Automation Hub with Semaphore UI",subtitle:"Infrastructure automation framework that reclaimed ~80% of team capacity",problem:"Routine maintenance — disk utilisation checks, MariaDB backups, service restarts, log rotation — was consuming approximately 80% of team time and leaving little capacity for engineering work.",solution:"Built multi-role Ansible project in Git covering disk utilisation monitoring, automated MariaDB backups with retention policies, service health checks, and log rotation. Integrated Semaphore UI for web-based job scheduling and role-based access, enabling non-CLI team members to trigger and audit runs without shell access.",outcomes:["Reclaimed ~80% of team capacity previously spent on manual tasks","Automated disk checks reduce human error significantly","Web UI enables non-CLI team members to trigger and audit runs","Full audit trail of all automation executions via Semaphore UI"],tech:["Ansible","Python","Bash","Git","Semaphore UI","MariaDB","Cron"]},
-  /* 5 */ {icon:"💾",title:"Enterprise Storage Solutions",subtitle:"Multi-protocol file services with zero recurring failures across 5+ client environments",problem:"NFS, Samba, and VSFTP had recurring permission, authentication, and mount failures requiring weekly manual intervention across multiple client environments.",solution:"Audited NFS export configs, debugged Samba via LDAP integration, implemented VSFTP PAM authentication. Integrated all file services with LDAP directory, documented troubleshooting runbooks, and automated health checks.",outcomes:["Zero manual interventions required in 3 months post-implementation","Resolved 100% of recurring permission and authentication issues","Integrated all file services with centralised LDAP directory","99%+ uptime across all file services for 5+ client environments"],tech:["NFS","Samba / SMB","VSFTP","LDAP Integration","Linux","PAM Auth"]}
+  /* 5 */ {icon:"☁️",title:"Azure Cloud Infrastructure Lab",subtitle:"Hands-on Azure environment built while preparing for the AZ-104 certification",problem:"Needed practical, hands-on experience with core Azure services to complement on-premises infrastructure skills and prepare for the AZ-104 exam.",solution:"Provisioned and configured Azure Virtual Machines, Resource Groups, and Storage Accounts. Secured VM network access with custom Network Security Group rules and explored Microsoft Entra ID for basic identity and access management.",outcomes:["Working knowledge of core Azure compute and storage services","Custom NSG rules for VM network security","Hands-on exposure to Microsoft Entra ID identity management","Direct exam preparation for AZ-104"],tech:["Microsoft Azure","Virtual Machines","Storage Accounts","Network Security Groups","Resource Groups","Microsoft Entra ID"]}
 ];
 
 let savedScrollY=0;
@@ -724,64 +728,79 @@ function makeCanvas(card){
   card.addEventListener('mouseleave',()=>{active=false;});
 })();
 
-/* ── 6. STORAGE ── */
+/* ── 6. CLOUD (Azure) ── floating resource-tag animation ── */
 (function(){
-  const card=document.getElementById('card-disk');
-  const icon=document.getElementById('icon-disk');
+  const card=document.getElementById('card-azure');
+  const icon=document.getElementById('icon-azure');
   const cvs=makeCanvas(card);
-  let active=false,raf=null,t=0,files=[];
-  const fileTypes=[{label:'NFS',col:'#5dba5d'},{label:'SMB',col:'#f0b870'},{label:'FTP',col:'#66c8ff'}];
-  function bez(p0x,p0y,cpx,cpy,p1x,p1y,t){
-    const m=1-t;
-    return{x:m*m*p0x+2*m*t*cpx+t*t*p1x,y:m*m*p0y+2*m*t*cpy+t*t*p1y};
-  }
-  function drawServer(ctx,x,y){
-    ctx.save();ctx.translate(x,y);
-    ctx.fillStyle='rgba(46,26,9,0.85)';ctx.strokeStyle='rgba(212,135,58,0.8)';ctx.lineWidth=1.5;
-    ctx.beginPath();ctx.roundRect(-14,-22,28,44,3);ctx.fill();ctx.stroke();
-    for(let i=0;i<3;i++){
-      ctx.fillStyle='rgba(212,135,58,0.5)';ctx.fillRect(-10,-16+i*12,20,7);
-      ctx.beginPath();ctx.arc(8,-12.5+i*12,2,0,Math.PI*2);
-      ctx.fillStyle=i===0?`rgba(90,210,90,${0.7+Math.sin(t*0.15+i)*0.3})`:'rgba(212,135,58,0.4)';ctx.fill();
-    }
-    ctx.font='bold 7px monospace';ctx.fillStyle='rgba(240,184,112,0.9)';
-    ctx.textAlign='center';ctx.fillText('SRV',0,30);ctx.restore();
-  }
-  function drawFileIcon(ctx,x,y,label,col,alpha){
-    ctx.save();ctx.globalAlpha=alpha;ctx.translate(x,y);
-    ctx.fillStyle='rgba(254,249,240,0.95)';ctx.strokeStyle=col;ctx.lineWidth=1.5;
-    ctx.beginPath();ctx.moveTo(-8,-10);ctx.lineTo(5,-10);ctx.lineTo(10,-5);ctx.lineTo(10,10);ctx.lineTo(-8,10);ctx.closePath();
-    ctx.fill();ctx.stroke();
-    ctx.beginPath();ctx.moveTo(5,-10);ctx.lineTo(5,-5);ctx.lineTo(10,-5);ctx.lineWidth=1;ctx.stroke();
-    ctx.font='bold 5px monospace';ctx.fillStyle=col;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(label,0,2);
-    ctx.restore();
-  }
-  function frame(){
-    t++;const W=card.offsetWidth,H=card.offsetHeight;cvs.width=W;cvs.height=H;
-    const ctx=cvs.getContext('2d');ctx.clearRect(0,0,W,H);
-    icon.style.transform=`scale(${1+Math.sin(t*0.06)*0.04})`;icon.style.transformOrigin='left top';
-    const p=iconPos(icon,card),sx=p.x,sy=p.y,tx=W-28,ty=H-34;
-    drawServer(ctx,tx,ty);
-    ctx.save();ctx.setLineDash([4,6]);ctx.strokeStyle='rgba(212,135,58,0.12)';ctx.lineWidth=1;
-    ctx.beginPath();ctx.moveTo(sx,sy);ctx.quadraticCurveTo((sx+tx)/2,(Math.min(sy,ty)-40),tx,ty);
-    ctx.stroke();ctx.setLineDash([]);ctx.restore();
-    if(t%30===0){
-      const fi=fileTypes[Math.floor(Math.random()*fileTypes.length)];
-      const cpx=(sx+tx)/2+(Math.random()-0.5)*50,cpy=Math.min(sy,ty)-35-Math.random()*25;
-      files.push({sx,sy,tx,ty,cpx,cpy,prog:0,speed:0.008+Math.random()*0.005,...fi});
-    }
-    files=files.filter(f=>{
-      f.prog+=f.speed;if(f.prog>1)return false;
-      const pos=bez(f.sx,f.sy,f.cpx,f.cpy,f.tx,f.ty,f.prog);
-      const alpha=f.prog<0.1?f.prog*10:f.prog>0.85?(1-f.prog)/0.15:1;
-      drawFileIcon(ctx,pos.x,pos.y,f.label,f.col,alpha);return true;
+  let active=false,raf=null,t=0,tags=[];
+  const LABELS=['VM','NSG','RG','IAM','Sub','VNet'];
+
+  function spawnTag(cx,cy){
+    const label=LABELS[Math.floor(Math.random()*LABELS.length)];
+    const angle=-Math.PI/2+(Math.random()-0.5)*1.0;
+    const spd=0.5+Math.random()*0.7;
+    tags.push({
+      x:cx+(Math.random()-0.5)*18,
+      y:cy,
+      vx:Math.cos(angle)*spd,
+      vy:Math.sin(angle)*spd,
+      label,
+      life:1,
+      size:8+Math.random()*4
     });
-    if(active)raf=requestAnimationFrame(frame);
-    else{icon.style.transform='';ctx.clearRect(0,0,W,H);}
   }
-  card.addEventListener('mouseenter',()=>{active=true;files=[];t=0;cancelAnimationFrame(raf);raf=requestAnimationFrame(frame);});
-  card.addEventListener('mouseleave',()=>{active=false;icon.style.transform='';});
+
+  function frame(){
+    t++;
+    const W=card.offsetWidth,H=card.offsetHeight;
+    cvs.width=W;cvs.height=H;
+    const ctx=cvs.getContext('2d');
+    ctx.clearRect(0,0,W,H);
+    if(!active){tags=[];icon.style.filter='';icon.style.transform='';return;}
+
+    const drift=Math.sin(t*0.05)*3;
+    icon.style.transform=`translateX(${drift}px)`;
+    icon.style.filter=`drop-shadow(0 0 ${5+Math.sin(t*0.07)*3}px rgba(212,135,58,0.55))`;
+
+    if(t%22===0){
+      const p=iconPos(icon,card);
+      spawnTag(p.x,p.y);
+    }
+
+    tags=tags.filter(tg=>{
+      tg.x+=tg.vx;
+      tg.y+=tg.vy;
+      tg.vy-=0.010;
+      tg.life-=0.014;
+      if(tg.life<=0)return false;
+      const alpha=tg.life<0.25?tg.life/0.25:1;
+      ctx.save();
+      ctx.globalAlpha=alpha*0.95;
+      ctx.font=`600 ${tg.size}px 'DM Sans',monospace`;
+      ctx.fillStyle='rgba(212,135,58,0.95)';
+      ctx.textAlign='center';
+      ctx.textBaseline='middle';
+      ctx.fillText(tg.label,tg.x,tg.y);
+      ctx.restore();
+      return true;
+    });
+
+    raf=requestAnimationFrame(frame);
+  }
+
+  card.addEventListener('mouseenter',()=>{
+    cancelAnimationFrame(raf);active=true;tags=[];t=0;
+    raf=requestAnimationFrame(frame);
+  });
+  card.addEventListener('mouseleave',()=>{
+    active=false;tags=[];
+    icon.style.filter='';icon.style.transform='';
+    cancelAnimationFrame(raf);raf=null;
+    const ctx=cvs.getContext('2d');ctx.clearRect(0,0,cvs.width,cvs.height);
+  });
 })();
+
 </script>
 </body>
 </html>
